@@ -1,5 +1,5 @@
 ////////////////////////////////////
-//Brian Chen
+//Katherine Porfirio
 //Demo 0
 //Hello World Java Program
 //
