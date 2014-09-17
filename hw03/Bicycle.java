@@ -2,7 +2,8 @@
 //  CSE 002 Section 110
 //  09/11/2014
 
-//  Bicycle program
+//  program prompts the user to enter the number of counts on the cyclometer and the number of seconds for the trip
+//  program prints out the distance (miles) and speed (mph) for the trip
 
 //  scanner is in the java.util package
 import java.util.Scanner;
