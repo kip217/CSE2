@@ -19,12 +19,14 @@ public class Month  {
         //  create a scanner object
         Scanner input = new Scanner(System.in);
         
-        //  prompt the user to enter an integer, accept user input
+        //  prompt the user to enter an integer
         System.out.print("Enter an integer between 1 and 12 representing a month: ");
-        int month = input.nextInt();
-        
+
         //  continue with program if the input is an integer
         if (input.hasNextInt()) {
+            
+            //  accept user input
+            int month = input.nextInt();
             
             //  continue with program if integer is between 1 and 12
             if (month > 0 && month <= 12)   {
@@ -37,11 +39,13 @@ public class Month  {
             
                 //  variable amount of days for February
                 else if (month == 2)  {
-                    //  ask the user for the year, accept user input
+                    //  ask the user for the year
                     System.out.print("Enter an integer representing the year: ");
-                    int year = input.nextInt();
+                    
                     //  make sure the user entered an integer for the year
                     if (input.hasNextInt()) {
+                        //  accept user input
+                        int year = input.nextInt();
                         //  2016 is a leap year, so subtract year from 2016
                         int afterSubtraction = 2016 - year;
                         //  divide the result by 4, take the remainder

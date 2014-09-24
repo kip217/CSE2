@@ -19,12 +19,14 @@ public class TimePadding    {
         //  create a scanner object
         Scanner input = new Scanner(System.in);
         
-        //  prompt the user to enter the time, accept user input
+        //  prompt the user to enter the time
         System.out.print("Enter the time, in seconds: ");
-        int seconds = input.nextInt();
         
         //  if the input is an integer
         if (input.hasNextInt()) {
+            
+            //  accept user input
+            int seconds = input.nextInt();
             
             //  if the integer is positive and does not exceed the number of seconds in a day
             if (seconds >= 0 && seconds <= 86400)    {

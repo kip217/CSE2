@@ -19,12 +19,14 @@ public class CourseNumber   {
         //  create a scanner object
         Scanner input = new Scanner(System.in);
         
-        //  prompt the user to enter an integer, accept user input
+        //  prompt the user to enter an integer
         System.out.print("Enter a six-digit number that gives the course number: ");
-        int courseNumber = input.nextInt();
         
         //  if the input is an integer
         if (input.hasNextInt()) {
+            
+            //  accept user input
+            int courseNumber = input.nextInt();
             
             //  if the input is within the allowed range
             if (courseNumber >= 186510 && courseNumber <= 201440)   {
