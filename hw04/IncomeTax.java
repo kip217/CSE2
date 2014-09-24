@@ -46,8 +46,13 @@ public class IncomeTax  {
                 double income = doubleIncomeInThousands * 1000;
                 //  get the income tax
                 double tax = income * incomeTax;
+                //  make tax and int
+                int intTax = (int) (incomeTax * 100);
+                //  make tax a pretty number
+                int prettyTax = (int) (tax * 100);
+                double prettyTax2 = prettyTax / 100;
                 //  print out the income, the tax rate, and the tax
-                System.out.println("The tax rate on $" +income+ " is " +(incomeTax*100)+ "%, and the tax is $" +tax+ "");
+                System.out.println("The tax rate on $" +income+ " is " +intTax+ "%, and the tax is $" +prettyTax2+ "");
                 
             }   //  end of if statement for income less than $20,000
             
@@ -62,8 +67,13 @@ public class IncomeTax  {
                 double income = doubleIncomeInThousands * 1000;
                 //  get the income tax
                 double tax = income * incomeTax;
+                //  make tax and int
+                int intTax = (int) (incomeTax * 100);
+                //  make tax a pretty number
+                int prettyTax = (int) (tax * 100);
+                double prettyTax2 = prettyTax / 100;
                 //  print out the income, the tax rate, and the tax
-                System.out.println("The tax rate on $" +income+ " is " +(incomeTax*100)+ "%, and the tax is $" +tax+ "");
+                System.out.println("The tax rate on $" +income+ " is " +intTax+ "%, and the tax is $" +prettyTax2+ "");
                 
             }   //  end of if statement for income greater than or equal to $20,000 and less than $40,000
             
@@ -78,8 +88,13 @@ public class IncomeTax  {
                 double income = doubleIncomeInThousands * 1000;
                 //  get the income tax
                 double tax = income * incomeTax;
+                //  make tax and int
+                int intTax = (int) (incomeTax * 100);
+                //  make tax a pretty number
+                int prettyTax = (int) (tax * 100);
+                double prettyTax2 = prettyTax / 100;
                 //  print out the income, the tax rate, and the tax
-                System.out.println("The tax rate on $" +income+ " is " +(incomeTax*100)+ "%, and the tax is $" +tax+ "");
+                System.out.println("The tax rate on $" +income+ " is " +intTax+ "%, and the tax is $" +prettyTax2+ "");
                 
             }   //  end of if statement for income greater than or equal to $40,000 and less than $78,000
             
@@ -94,8 +109,13 @@ public class IncomeTax  {
                 double income = doubleIncomeInThousands * 1000;
                 //  get the income tax
                 double tax = income * incomeTax;
+                //  make tax and int
+                int intTax = (int) (incomeTax * 100);
+                //  make tax a pretty number
+                int prettyTax = (int) (tax * 100);
+                double prettyTax2 = prettyTax / 100;
                 //  print out the income, the tax rate, and the tax
-                System.out.println("The tax rate on $" +income+ " is " +(incomeTax*100)+ "%, and the tax is $" +tax+ "");
+                System.out.println("The tax rate on $" +income+ " is " +intTax+ "%, and the tax is $" +prettyTax2+ "");
                 
             }   //  end of if statement for income greater than or equal to $78,000
             
