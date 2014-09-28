@@ -3,6 +3,9 @@
 //  09/27/2014
 
 //  Homework #5
+//  program asks the user if they want a burger, soda, or fries
+//  program then asks for more details regarding their preferences
+//  program generates an error message if the user enters an invalid input
 
 //  import scanner
 import java.util.Scanner;
