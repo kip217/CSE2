@@ -12,51 +12,104 @@ public class BigMacAgain {
     //	create a scanner object
     Scanner input = new Scanner(System.in);
     
-    //	prompt the user to enter the number of Big Macs; accept user input
+    //	prompt the user to enter the number of Big Macs
     System.out.print("Enter the number of Big Macs: ");
-    double bigMacs = input.nextDouble();
         
-        //  make sure the input is an integer
-        if(input.hasNextInt()) {
-            bigMacs = bigMacs;
-        }
-        
-        else {
-            System.out.println("Error: You must enter an integer");
-            return;     //  program terminates
-        }
-        
-        //  make sure the input is a positive number
-        if(bigMacs > 0) {
-            bigMacs = bigMacs;
-        }
-        
-        else {
-            System.out.println("Error: You must enter a positive number");
-            return;     //  program terminates
-        }
-        
-    //  ask if the user wants fries; accept user input
-    
-    String Y = (Boolean) true;
-    String N = (Boolean) false;
-    
-    System.out.println("Do you want french fries?");
-    System.out.print("Enter 'Y' for yes and 'N' for no: ");
-    Boolean fries = input.next();
-    
-    //  fries
-    
-    if (input == Y) {
-        bigMacs = bigMacs;
-    }
-    
-    
-        
-        
-    
-    
+        //  if the input is an integer
+        if (input.hasNextInt()) {
+            
+            //  accept user input
+            int numberOfBigMacs = input.nextInt();
+            
+            //  if the integer is greater than zero
+            if (numberOfBigMacs > 0)    {
+                
+                //  calculate the cost of the big macs and print the subtotal
+                double bigMacCost = ((double) numberOfBigMacs) * 2.22;
+                System.out.println("You ordered " +numberOfBigMacs+ " Big Macs for a subtotal of $" +bigMacCost);
+                
+                //  determine if the user wants fries
+                System.out.println("Do you want fries with that?");
+                System.out.println("    Please enter 'Y' or 'y' to answer 'yes'");
+                System.out.println("    Please enter 'N' or 'n' to answer 'no'");
+                System.out.println("");
+                System.out.print("Please enter your choice: ");
+                
+                //  if the input is a string
+                if (input.hasNextLine())    {
+                    
+                    //  accept user input
+                    String friesDecision = input.nextLine();
 
+                    //  check the length of the string
+                    int length = friesDecision.length();
+                    
+                    //  if the length of the string is 1
+                    if (length==1)  {
+                        
+                        //  if the user wants fries
+                        if (friesDecision.equals("Y") || friesDecision.equals("y")) {
+                            //  print subtotal of fries and total cost of the order
+                            System.out.println("You ordered 1 order of fries for a subtotal of $2.15");
+                            System.out.println("");
+                            System.out.println("The total cost is: $" +(bigMacCost+2.15));
+                        }   //  end of if statement if the user wants fries
+                        
+                        //  if the user does not want fries
+                        else if (friesDecision.equals("N") || friesDecision.equals("n"))    {
+                            //  print total cost of the order
+                            System.out.println("");
+                            System.out.println("The total cost is: $" +bigMacCost);
+                        }   //  end of else if statement if the user does not want fries
+                        
+                        //  if the user did not enter a valid character
+                        else    {
+                            //  print error statement
+                            System.out.println("Error: You must enter a valid character");
+                            //  terminate program
+                            return;
+                        }   //  end of else statement if the user did not enter a valid character
+                        
+                    }   //  end of if statement if the length of the string is 1
+                    
+                    //  if the length of the string is not 1
+                    else    {
+                        //  print error statement
+                        System.out.println("Error: You must enter a single character");
+                        //  terminate program
+                        return;
+                    }   //  end of else statement if the length of the string is not 1
+                    
+                }   //  end of if statement if input is a string
+                
+                //  if the input is not a string
+                else    {
+                    //  print error statement
+                    System.out.println("Error: You must enter a valid input");
+                    //  terminate program
+                    return;
+                }   //  end of else statement if the input is not a string
+                
+            }   //  end of if statement if integer is greater than zero
+            
+            //  if the integer is less than or equal to zero
+            else    {
+                //  print error message
+                System.out.println("Error: You must enter an integer greater than zero");
+                //  terminate program
+                return;
+            }   //  end of else statement if the integer is less than or equal to zero
+            
+        }   //  end of if statement if input is an integer
+        
+        //  if the input is not an integer
+        else    {
+            //  print error message
+            System.out.println("Error: You must enter an integer value");
+            //  terminate program
+            return;
+        }   //  end of else statement if the integer is not an integer
+        
     }	//	end of main method
 
 }	//	end of class

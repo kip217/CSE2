@@ -98,69 +98,73 @@ public class RandomGames    {
                     //  number / face on cards
                     
                         //  generate a random number between 0 and 1
-                        double randomFace = Math.random();
+                        double randomNumber = Math.random();
                         //  multiply random number by 13
-                        randomFace = randomFace * 13;
+                        randomNumber = randomNumber * 13;
                         //  make random number an int
-                        int randomFaceInt = (int) randomFace;
+                        int randomNumberInt = (int) randomNumber;
                         
-                        //  if number is 1 - 10
-                        if (randomFaceInt <= 10)    {
-                            int face = randomFaceInt;
-                        }   //  end of if statement if number is 1 - 10
+                        //  declare string for random number on card
+                        String numberOnCard = "0";
                         
-                        //  if number is 11 - 13
-                        else    {
+                        //  switch statement for random number on card
+                        switch (randomNumberInt)    {
                             
-                            //  face card is a jack
-                            if (randomFaceInt == 11) {
-                               String face = "Jack";
-                           }    //  end of if statement for jacks
-                           
-                           //   face card is a queen
-                           if (randomFaceInt == 12) {
-                               String face = "Queen";
-                           }    //  end of if statement for queens
-                           
-                           //   face card is a king
-                           if (randomFaceInt == 13) {
-                               String face = "King";
-                           }    //  end of if statement for kings
-                           
-                        }   //  end of else statement for face cards
+                            case 0:     numberOnCard = "1";
+                                        break;
+                            case 1:     numberOnCard = "2";
+                                        break;
+                            case 2:     numberOnCard = "3";
+                                        break;
+                            case 3:     numberOnCard = "4";
+                                        break;
+                            case 4:     numberOnCard = "5";
+                                        break;
+                            case 5:     numberOnCard = "6";
+                                        break;
+                            case 6:     numberOnCard = "7";
+                                        break;
+                            case 7:     numberOnCard = "8";
+                                        break;
+                            case 8:     numberOnCard = "9";
+                                        break;
+                            case 9:    numberOnCard = "10";
+                                        break;
+                            case 10:    numberOnCard = "Jack";
+                                        break;
+                            case 11:    numberOnCard = "Queen";
+                                        break; 
+                            case 12:    numberOnCard = "King";
+                                        break;
+                                        
+                        }   //  end of switch statement for random number on card
                         
-                    //  symbol on cards - hearts, diamonds, spades or clubs
-                    
                         //  generate a random number between 0 and 1
-                        double randomSymbol = Math.random();
-                        //  multiply random number by 4
-                        randomSymbol = randomSymbol * 4;
+                        double randomNumber2 = Math.random();
+                        //  multiply random number by 13
+                        randomNumber2 = randomNumber2 * 4;
                         //  make random number an int
-                        int randomSymbolInt = (int) randomSymbol;
+                        int randomNumberInt2 = (int) randomNumber2;
                         
-                        //  symbol is heart
-                        if (randomSymbolInt == 1)   {
-                            String symbol = "Hearts";
-                        }   //  end of if statement for heart symbol
+                        //  declare variable for random symbol on card
+                        String symbolOnCard = "0";
                         
-                        //  symbol is diamond
-                        if (randomSymbolInt == 2)   {
-                            String symbol = "Diamonds";
-                        }   //  end of if statement for diamond symbol
-                        
-                        //  symbol is spade
-                        if (randomSymbolInt == 3)   {
-                            String symbol = "Spades";
-                        }   //  end of if statement for spade symbol
-                        
-                        //  symbol is club
-                        if (randomSymbolInt == 4)   {
-                            String symbol = "Clubs";
-                        }   //  end of if statement for club symbol
-                        
-                    //  print results
-                    System.out.print("Your card is : ");
-                    System.out.print(face)
+                        //  switch statement for random symbol on card
+                        switch (randomNumberInt2)   {
+                            
+                            case 0:     symbolOnCard = "Hearts";
+                                        break;
+                            case 1:     symbolOnCard = "Diamonds";
+                                        break;
+                            case 2:     symbolOnCard = "Clubs";
+                                        break;
+                            case 3:     symbolOnCard = "Spades";
+                                        break;
+                            
+                        }   //  end of switch statement for random symbol on card
+                    
+                    //  print result of picking a random card from the deck
+                    System.out.println("You picked the card: " +numberOnCard+ " of " +symbolOnCard);
                     
                 }   //  end of if statement if user wants to pick a card from a deck
                 
