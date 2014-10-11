@@ -29,6 +29,7 @@ public class BigMacAgain {
                 System.out.println("You ordered " +numberOfBigMacs+ " Big Macs for a subtotal of $" +bigMacCost);
                 
                 //  determine if the user wants fries
+                System.out.println("");
                 System.out.println("Do you want fries with that?");
                 System.out.println("    Please enter 'Y' or 'y' to answer 'yes'");
                 System.out.println("    Please enter 'N' or 'n' to answer 'no'");
