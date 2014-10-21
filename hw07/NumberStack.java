@@ -4,6 +4,10 @@
 
 //  Homework #7
 
+//  program asks user to input an integer between 1 and 9
+//  program will generate an error message if the user does not enter an integer between 1 and 9
+//  program prints out a stack of numbers based on the user's input
+
 //  import scanner
 import java.util.Scanner;
 
