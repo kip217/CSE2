@@ -10,7 +10,7 @@
 import java.util.Scanner;
 
 //  define class
-public class Practice2  {
+public class HW8	{
     
     //  main method
     public static void main(String []arg)   {
@@ -80,7 +80,7 @@ public class Practice2  {
                 //  if incorrect input
                 else    {
                     System.out.print("You did not enter a character from the list 'Cc'; try again - ");
-				    counter --;
+				    				counter --;
                 }   //  end of else statement for incorrect input
                 
             }   //  end of if statement if input is a string
@@ -92,9 +92,10 @@ public class Practice2  {
             
         }   //  end of while loop for trials
         
+        //	fail message, required return
         System.out.println("");
         System.out.println("You failed after 5 tries");
-        return '.';
+        return ' ';
         
     }   //  end of getInput method 1
     
@@ -149,9 +150,10 @@ public class Practice2  {
             
         }   //  end of while loop for trials
         
+        //	fail message, required return
         System.out.println("");
         System.out.println("You failed after 5 tries");
-        return '.';
+        return ' ';
         
     }   //  end of getInput method 2
     
@@ -231,7 +233,7 @@ public class Practice2  {
                 else    {
                     System.out.println("You did not enter an acceptable character");
                     System.out.println("Choose a digit");
-                    System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'-");
+                    System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'- ");
 				    counter --;
                 }   //  end of else statement for incorrect input
                 
@@ -244,9 +246,10 @@ public class Practice2  {
             
         }   //  end of while loop for trials
         
+        //	fail message, required return
         System.out.println("");
         System.out.println("You failed after 5 tries");
-        return '.';
+        return ' ';
         
     }   //  end of getInput method 3
 
