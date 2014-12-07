@@ -1,12 +1,25 @@
 //  Katherine Porfirio
+//  CSE 002 Section 110
+//  10/10/2014
 
-//  define a class
-public class Practice5 {
-    
-//  add main method
-public static void main(String[] args) {
-    
-            //  declare and initialize variables
+//  Lab #6
+
+/* Insert System.out.println() statements in the code
+ * below, displaying the status of n and k, which 
+ * should help you identify when n  or k becomes 0 and causes
+ * the program to crash
+ */
+
+//  import scanner
+import java.util.Scanner;
+
+//  define class
+public class Enigma3{
+
+    //  main method
+    public static void main(String [] arg){
+        
+        //  declare and initialize variables
         int n=40,k=60;
         String out="";
         
@@ -37,11 +50,11 @@ public static void main(String[] args) {
         }
         
         else    {
-            n=45;
+            n=45;       //  n = 45
             out+=n+k;   //  out = "40-798"
         }
         
-                //  n + k = 98
+        //  n + k = 98
         switch(n+k) {
             case 114: 
                         n-=11;
@@ -55,16 +68,26 @@ public static void main(String[] args) {
                         n/=5;   //  n = 9
                         k/=9;   //  k = 5
             default:
-                        n-=3;
-                        k-=5;
+                        n-=3;   //  n = 6
+                        k-=5;   //  k = 0
         }
-            
-            
-        out+=1/n + 1/k;   
+     
+        k++;
+     
+        //  1/k = 1/0 ; therefore runtime error
+        out+=1/n + 1/k;
         
-            System.out.println(n);
-            System.out.println(k);
-            System.out.println(out);
-    
-    }
+        System.out.println(out);
+  }
 }
+
+/*
+ * Error report:
+ * 
+ *  In line 72, k becomes equal to 0. Therefore, line 78 produces a runtime error
+ * because 1/k = 0. This was fixed by adding another line of code (line 75: k++;)
+ * so that k = 1 and thus the expression 1/k does not produce a runtime error
+ * anymore.
+ * 
+ * 
+ */

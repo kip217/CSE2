@@ -15,238 +15,96 @@ public class Practice2  {
     //  main method
     public static void main(String []arg)   {
         
-        //  declare char variable
-        char input;
-        
-        //  declare scanner
         Scanner scan = new Scanner(System.in);
+        int n = 0;
         
-        //  prompt user to enter a character to continue
-        System.out.print("Enter 'C' or 'c' to continue, anything else to quit- ");
+        System.out.print("Enter an int- ");
         
-        //  method for user input
-        input = getInput(scan,"Cc");
+        //  LOOP #1
+        //  do-while loop
         
-        //  pring user input
-        System.out.println("You entered '"+input+"'");
-        
-        //  prompt user to enter a character again
-        System.out.print("Enter 'y', 'Y', 'n', or 'N'- ");
-        
-        //  method for user input
-        input = getInput(scan,"yYnN", 5);	//	give up after 5 attempts
-        
-        //  if input is not equal to a space
-        if (input != ' ')   {
-            System.out.println("You entered '"+input+"'");
-        }   //  end of if statement
-        
-        //  prompt again
-        System.out.println("Choose a digit.");
-        System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'-");
-        
-        //  method for user input
-        input = getInput(scan, "Choose a digit." , "0123456789");
-        
-        //  print user input
-        System.out.println("You entered '"+input+"'");
-        
-    }   //  end of main method
-      
-    //  getInput method 1  
-    public static char getInput(Scanner scan, String string1)  {
-        
-        //  define counter
-        int counter = 5;
-        
-        while (counter > 0) {
-        
-            if (scan.hasNextLine()) {
-                 
-                String scan1 = scan.nextLine();
-                
-                //  if "C"
-                if (scan1.equals("C"))   {
-                    //  return correct input
-                    return 'C';
-                }   //  end of if statement for "C"
-                
-                //  if "c"
-                else if (scan1.equals("c"))  {
-                    //  return correct input
-                    return 'c';
-                }   //  end of else if statement for "c"
-                
-                //  if incorrect input
-                else    {
-                    System.out.print("You did not enter a character from the list 'Cc'; try again - ");
-				    counter --;
-                }   //  end of else statement for incorrect input
-                
-            }   //  end of if statement if input is a string
+        do  {
             
-            //  if input is not a string
+            //  if the user entered an integer
+            if (scan.hasNextInt())  {
+                n = scan.nextInt();
+                break;
+            }
+            
+            //  if the user did not enter an integer
             else    {
-                counter--;
-            }   //  end of else statement if input is not a string
+                scan.next();
+                System.out.print("You did not enter an int; try again- ");
+            }
             
-        }   //  end of while loop for trials
+        }   while (!scan.hasNextInt());
         
-        System.out.println("");
-        System.out.println("You failed after 5 tries");
-        return '.';
+        //  LOOP #2
+        //  while loops
         
-    }   //  end of getInput method 1
-    
-    //  getInput method 2
-    public static char getInput(Scanner scan, String string1, int int1)  {
+        //  declare and initialize variables
+        int j = 0;
+        int k = 0;
         
-        //  define counter
-        int counter = 5;
-        
-        while (counter > 0) {
-        
-            if (scan.hasNextLine()) {
-                 
-                String scan1 = scan.nextLine();
-                
-                //  if "Y"
-                if (scan1.equals("Y"))   {
-                    //  return correct input
-                    return 'Y';
-                }   //  end of if statement for "Y"
-                
-                //  if "y"
-                else if (scan1.equals("y"))  {
-                    //  return correct input
-                    return 'y';
-                }   //  end of else if statement for "y"
-                
-                //  if "N"
-                else if (scan1.equals("N"))   {
-                    //  return correct input
-                    return 'N';
-                }   //  end of if statement for "N"
-                
-                //  if "n"
-                else if (scan1.equals("n"))  {
-                    //  return correct input
-                    return 'n';
-                }   //  end of else if statement for "n"
-                
-                //  if incorrect input
-                else    {
-                    System.out.print("You did not enter a character from the list 'yYnN'; try again - ");
-				    counter --;
-                }   //  end of else statement for incorrect input
-                
-            }   //  end of if statement if input is a string
+        while (j < n && j < 40) {
             
-            //  if input is not a string
+            while (k < j + 1)   {
+                
+                //  print stars
+                System.out.print("*");
+                
+                //  control while loop
+                k++;
+            }
+            
+            //  next line
+            System.out.println();
+            
+            //  control while loop
+            j++;
+        }
+        
+        //  LOOP #3
+        //  while loop
+        
+        //  first run of do-while loop
+        k = 4;
+        System.out.println("k=" +k);
+        k++;
+        
+        //  replace with while loop
+        while (k < 4)   {
+            System.out.println("k=" +k);
+            k++;
+        }
+        
+        //  LOOP #4
+        //  replace switch statement with loops
+        
+        int count = 0;
+        
+        while (count <= 10) {
+            
+            if (n == 1 || n == 2) {
+                System.out.print("Case 2");
+            }
+            
+            else if (n == 4) {
+                System.out.println("Case 4");
+                System.out.println("Case 5");
+            }
+            
+            else if (n == 5)    {
+                System.out.println("Case 5");
+            }
+            
             else    {
-                counter--;
-            }   //  end of else statement if input is not a string
+                System.out.println(n+ " is > 5 or < 1");
+            }
             
-        }   //  end of while loop for trials
-        
-        System.out.println("");
-        System.out.println("You failed after 5 tries");
-        return '.';
-        
-    }   //  end of getInput method 2
-    
-    //  getInput method 3
-    public static char getInput(Scanner scan, String string1, String string2)  {
-        
-        //  define counter
-        int counter = 5;
-        
-        while (counter > 0) {
-        
-            if (scan.hasNextLine()) {
-                 
-                String scan1 = scan.nextLine();
-                
-                //  if "0"
-                if (scan1.equals("0"))   {
-                    //  return correct input
-                    return '0';
-                }   //  end of if statement for "0"
-                
-                //  if "1"
-                else if (scan1.equals("1"))  {
-                    //  return correct input
-                    return '1';
-                }   //  end of else if statement for "1"
-                
-                //  if "2"
-                else if (scan1.equals("2"))   {
-                    //  return correct input
-                    return '2';
-                }   //  end of if statement for "2"
-                
-                //  if "3"
-                else if (scan1.equals("3"))  {
-                    //  return correct input
-                    return '3';
-                }   //  end of else if statement for "3"
-                
-                //  if "4"
-                else if (scan1.equals("4"))   {
-                    //  return correct input
-                    return '4';
-                }   //  end of if statement for "4"
-                
-                //  if "5"
-                else if (scan1.equals("5"))  {
-                    //  return correct input
-                    return '5';
-                }   //  end of else if statement for "5"
-                
-                //  if "6"
-                else if (scan1.equals("6"))   {
-                    //  return correct input
-                    return '6';
-                }   //  end of if statement for "6"
-                
-                //  if "7"
-                else if (scan1.equals("7"))  {
-                    //  return correct input
-                    return '7';
-                }   //  end of else if statement for "7"
-                
-                //  if "8"
-                else if (scan1.equals("8"))   {
-                    //  return correct input
-                    return '8';
-                }   //  end of if statement for "8"
-                
-                //  if "9"
-                else if (scan1.equals("9"))  {
-                    //  return correct input
-                    return '9';
-                }   //  end of else if statement for "9"
-                
-                //  if incorrect input
-                else    {
-                    System.out.println("You did not enter an acceptable character");
-                    System.out.println("Choose a digit");
-                    System.out.print("Enter one of: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'-");
-				    counter --;
-                }   //  end of else statement for incorrect input
-                
-            }   //  end of if statement if input is a string
+            count++;
             
-            //  if input is not a string
-            else    {
-                counter--;
-            }   //  end of else statement if input is not a string
-            
-        }   //  end of while loop for trials
-        
-        System.out.println("");
-        System.out.println("You failed after 5 tries");
-        return '.';
+        }   //  end of big while loop
         
     }   //  end of getInput method 3
 

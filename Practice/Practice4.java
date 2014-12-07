@@ -1,97 +1,50 @@
 //  Katherine Porfirio
 
+//  import scanner
+import java.util.Scanner;
+
 //  define a class
 public class Practice4 {
     
 //  add main method
 public static void main(String[] args) {
-
-                //
-                //  USING WHILE LOOP
-                //
-                
-                int number = 5;
-                
-                //  variables for loops
-                int counter = number;
-                int i1;
-                int k1;
-                int k2;
-                int k3;
-                
-                //  initialize variables
-                i1 = 1;
-                
-                //  while loop to print number pyramid
-                while (i1 <= counter) {
-                    
-                    //  initialize variables
-                    k3 = 1;
-                    
-                    //  while loop for number of number rows
-                    while (k3 <= i1)  {
-                        
-                        //  initialize variables
-                        k1 = 1;
-                        k2 = i1;
-                        
-                        //  while loop for spaces
-                        while (k1 <= number - k2)   {
-                            //  print the row
-                            System.out.print(" ");
-                            //  increment k1
-                            k1++;
-                        }   //  end of while loop for spaces
-                        
-                        //  initialize variables
-                        k1 = 1;
-                        k2 = i1;
-                        
-                        //  while loop for number rows
-                        while (k1 <= i1 + (i1 - 1))   {
-                            //  print the row
-                            System.out.print(k2);
-                            //  increment k1
-                            k1++;
-                        }   //  end of for loop for rows
-                        
-                        //  next line
-                        System.out.println("");
-                        
-                        //  increment k3
-                        k3++;
-                        
-                    }   // end of for loop for number of number rows
-                    
-                    //  initialize variables
-                    k1 = 1;
-                    k2 = i1;
-                    
-                    //  while loop for spaces
-                    while (k1 <= number - k2)   {
-                        //  print the row
-                        System.out.print(" ");
-                        //  increment k1
-                        k1++;
-                    }   //  end of for loop for rows
-                    
-                    //  initialize variable
-                    k1 = 1;
-                    
-                    //  while loop for - rows
-                    while (k1 <= i1 + (i1 - 1))   {
-                        //  print the row
-                        System.out.print("-");
-                        //  increment k1
-                        k1++;
-                    }   //  end of for loop for rows
-                    
-                    //  next line
-                    System.out.println("");
-                    
-                    //  increment i1
-                    i1++;
-                    
-                }   //  end of for loop for number pyramid
+    
+        //  scanner
+        Scanner scan = new Scanner(System.in);
+        
+        //  declare integers
+        int a;
+        a = 0;
+        int b;
+        b = 0;
+        int c;
+        c = 0;
+        
+        //  prompt user to enter three integers
+        System.out.println("Enter three ints: ");
+        
+        //  accept integers
+        a = getInt(scan);
+        b = getInt(scan);
+        c = getInt(scan);
+    
     }
+
+    public static boolean ascending(int num1, int num2, int num3)  {
+        
+        //  declare variables
+        int largestInt;
+        int middleInt;
+        int smallestInt;
+        
+        if ((num3 >= num2) && (num3 >= num1) && (num2 >= num1)) {
+            return true;
+        }
+        
+        else    {
+            return false;
+        }
+        
+    }   //  end of method for getting the ascending order
+        
 }

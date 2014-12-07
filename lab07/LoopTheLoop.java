@@ -13,97 +13,117 @@ public class LoopTheLoop    {
     //  main method
     public static void main(String[] args)  {
         
-        //  create scanner object
-        Scanner input = new Scanner(System.in);
+    int nStars = 10;
+    int counter = 0;
+    
+    //  Task #1:
+    
+    while (counter < nStars)    {
+        System.out.print("*");
+        counter ++;
+    }   
+    
+    System.out.println("");
+    System.out.println("");
+    
+    //  Task #2:
+    
+    counter = 0;
+    int i = 1;
+    int j = 1;
+    int k = 10;
+    nStars = 10;
+    
+    while (counter < nStars)    {
         
-        //  variable for stars
-        int nStars = 10;
-        
-        //  while loop to print out stars
-        while (nStars >= 1) {
+        while (i <= j)  {
             System.out.print("*");
-            nStars--;
-        }   //  end of while loop to print out stars
+            i++;
+        }
         
-        //  empty space
+        System.out.println("");
         System.out.println("");
         
-        //  while loop for pyramid of stars
-        int counter = 10;
-        nStars = 2;
-        int other = 1;
-        int difference = nStars - other;
-        while (counter >=1) {
-            while (difference >= 1)    {
-                System.out.print("*");
-                difference--;
-            }   //  end of nested while statement
-            System.out.println("");
-            nStars++;
-            counter--;
-            difference = nStars - other;
-        }   //  end of while loop for pyramid of stars
+        j++;
+        i = 1;
+        counter++;
+    }
+    
+    Scanner input = new Scanner(System.in);
+    
+    String again = "y";
+    int counter1 = 0;
+    
+    while (again.equals("Y") || again.equals("y"))  {
         
-        //  prompt the user to enter an integer between 1 and 15
+        //  prompt user
         System.out.print("Please enter an integer between 1 and 15: ");
         
-        // while statement if input is an int
-        while (input.hasNextInt())  {
-            //  accept user input
-            int userInput = input.nextInt();
-            
-            //  if the input is within range
-            if (userInput <= 15 && userInput >= 1)  {
-                
-                //  print the line of stars
-                
-                    //  variable for stars
-                    int nStars = userInput;
-                    
-                    //  while loop to print out stars
-                    while (nStars >= 1) {
-                        System.out.print("*");
-                        nStars--;
-                    }   //  end of while loop to print out stars
-                    
-                    //  empty space
-                    System.out.println("");
-                
-                //  print the pyramid of stars
-                
-                    int counter = userInput;
-                    nStars = 2;
-                    int other = 1;
-                    int difference = nStars - other;
-                    while (counter >=1) {
-                        while (difference >= 1)    {
-                            System.out.print("*");
-                            difference--;
-                        }   //  end of nested while statement
-                        System.out.println("");
-                        nStars++;
-                        counter--;
-                        difference = nStars - other;
-                        
-                    }   //  end of while loop for pyramid of stars
-                
-            }   //  end of if statement if the input is within range
-                
-            //  if the input is not within range
-            else    {
-                System.out.println("Error: You must enter an integer input");
-                System.out.println("Please enter an integer between 1 and 15: ");
-                
-            }   //  end of else statement if the input is not within range
-            
-        }   //  end of while statement if input is an int
+        while (!input.hasNextInt()) {
+            input.next();
+            System.out.print("You did not enter an integer; try again: ");
+        }
         
-        //  while statement if input is not an int
-        while (input!hasNextInt()) {
-            System.out.println("Error: You must enter an integer input");
-            System.out.println("Please enter an integer between 1 and 15: ");
+        if (input.hasNextInt()) {
+            counter1 = input.nextInt();
+        }
+        
+        while (counter1 < 1 || counter1 > 15)   {
             
-        }   //  end of while statement if input is not an int
+            System.out.print("Your integer is not within range; try again: ");
+            
+            if (input.hasNextInt()) {
+                counter1 = input.nextInt();
+                break;
+            }
+            
+            while (!input.hasNextInt()) {
+                input.next();
+                System.out.print("You did not enter an integer; try again: ");
+            }
+            
+        }
+        
+        nStars = counter1;
+        
+    //  Task #1:
+    
+    counter = 0;
+    
+    while (counter < nStars)    {
+        System.out.print("*");
+        counter ++;
+    }   
+    
+    System.out.println("");
+    System.out.println("");
+    
+    //  Task #2:
+    
+    counter = 0;
+    i = 1;
+    j = 1;
+    
+    while (counter < nStars)    {
+        
+        while (i <= j)  {
+            System.out.print("*");
+            i++;
+        }
+        
+        System.out.println("");
+        System.out.println("");
+        
+        j++;
+        i = 1;
+        counter++;
+    }
+        
+        Scanner input2 = new Scanner(System.in);
+        System.out.print("Enter 'Y' or 'y' to go again: ");
+        again = input2.nextLine();
+        
+    }   //  end of while loop for y or Y
             
     }   //  end of main method
     
