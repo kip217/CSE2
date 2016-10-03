@@ -2,6 +2,8 @@
 
     //  import scanner
     import java.util.Scanner;
+    
+    import java.text.DecimalFormat;
 
 //  define a class
 public class Practice {
@@ -9,118 +11,34 @@ public class Practice {
 //  add main method
 public static void main(String[] args) {
     
-    int nStars = 10;
-    int counter = 0;
+    System.out.println("Name \t\t Type \t\t Hours \t\t Total Pay");
+    DecimalFormat df = new DecimalFormat("###,###,##0.00");
     
-    //  Task #1:
+    String hours = df.format(43.98347);
+    String totalPay = df.format(983.34766);
     
-    while (counter < nStars)    {
-        System.out.print("*");
-        counter ++;
-    }   
+    String hours2 = df.format(345.98347);
+    String totalPay2 = df.format(93.34766);
     
-    System.out.println("");
-    System.out.println("");
+    double totalTotalPay = 923847.498357;
+    String total = df.format(totalTotalPay);
     
-    //  Task #2:
+    System.out.print("Smith");
+    System.out.print("\t\t hourly");
+    System.out.printf("%15s", hours);
+    System.out.print("\t  ");
+    System.out.printf("%15s", totalPay);
+    System.out.println();
     
-    counter = 0;
-    int i = 1;
-    int j = 1;
-    int k = 10;
-    nStars = 10;
+    System.out.print("Smith");
+    System.out.print("\t\t hourly");
+    System.out.printf("%15s", hours2);
+    System.out.print("\t  ");
+    System.out.printf("%15s", totalPay2);
+    System.out.println();
     
-    while (counter < nStars)    {
-        
-        while (i <= j)  {
-            System.out.print("*");
-            i++;
-        }
-        
-        System.out.println("");
-        System.out.println("");
-        
-        j++;
-        i = 1;
-        counter++;
-    }
-    
-    Scanner input = new Scanner(System.in);
-    
-    String again = "y";
-    int counter1 = 0;
-    
-    while (again.equals("Y") || again.equals("y"))  {
-        
-        //  prompt user
-        System.out.print("Please enter an integer between 1 and 15: ");
-        
-        while (!input.hasNextInt()) {
-            input.next();
-            System.out.print("You did not enter an integer; try again: ");
-        }
-        
-        if (input.hasNextInt()) {
-            counter1 = input.nextInt();
-        }
-        
-        while (counter1 < 1 || counter1 > 15)   {
-            
-            System.out.print("Your integer is not within range; try again: ");
-            
-            if (input.hasNextInt()) {
-                counter1 = input.nextInt();
-                break;
-            }
-            
-            while (!input.hasNextInt()) {
-                input.next();
-                System.out.print("You did not enter an integer; try again: ");
-            }
-            
-        }
-        
-        nStars = counter1;
-        
-    //  Task #1:
-    
-    counter = 0;
-    
-    while (counter < nStars)    {
-        System.out.print("*");
-        counter ++;
-    }   
-    
-    System.out.println("");
-    System.out.println("");
-    
-    //  Task #2:
-    
-    counter = 0;
-    i = 1;
-    j = 1;
-    
-    while (counter < nStars)    {
-        
-        while (i <= j)  {
-            System.out.print("*");
-            i++;
-        }
-        
-        System.out.println("");
-        System.out.println("");
-        
-        j++;
-        i = 1;
-        counter++;
-    }
-        
-        Scanner input2 = new Scanner(System.in);
-        System.out.println("Enter 'Y' or 'y' to go again: ");
-        again = input2.nextLine();
-        
-    }   //  end of while loop for y or Y
-    
+    System.out.print("\t\t\t\t\t  ");
+    System.out.printf("%15s", totalPay);
     
     }
 }
